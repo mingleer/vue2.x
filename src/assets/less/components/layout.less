@@ -1,0 +1,147 @@
+@layout: ~"@{css-prefix}layout";
+
+.@{layout} {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+
+    &-header {
+        height: 60px;
+        padding: 0;
+        line-height: inherit;
+        background: transparent;
+    }
+
+    &-sider {
+        background: transparent;
+    }
+
+    &-footer {
+        height: 45px;
+        padding: 0;
+        background: transparent;
+    }
+
+    &.layout {
+        background: #f7f7f7;
+
+        &>.@{layout}-header {
+            background: #2c7efa;
+        }
+
+        &>.@{layout} {
+            &>.@{layout}-sider {
+                box-shadow: -2px 0px 8px 0px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.maxh500 {
+    max-height: 500px;
+
+    .ivu-tabs-bar {
+        margin-bottom: 5px;
+    }
+}
+
+.layout {
+    &-header {
+        height: 100%;
+
+        &>.@{css-prefix}col:first-child {
+            text-align: center;
+
+            .logo {
+                width: 200px;
+                height: 50px;
+                margin-top: 4px;
+                border: none;
+
+                &.small {
+                    width: 50px;
+                }
+            }
+        }
+
+        .first-menu {
+            background: transparent;
+
+            .ivu-menu-item {
+                color: #fff;
+                font-size: 16px;
+                border: none;
+            }
+
+            &.ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active,
+            &.ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu-active,
+            &.ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:hover,
+            &.ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu:hover {
+                color: #fff;
+                border: none;
+                background-color: rgba(92, 173, 255, 0.357);
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        & .setting {
+            .@{css-prefix}col {
+                padding-left: 10px;
+                padding-right: 10px;
+                line-height: 60px;
+                color: #fff;
+
+                &>.@{css-prefix}icon {
+                    line-height: 60px;
+                    vertical-align: middle;
+                }
+
+                &.notification {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+
+                &:hover {
+                    background-color: rgba(92, 173, 255, 0.357);
+                }
+            }
+
+            .ivu-select-dropdown {
+                max-height: 500px;
+            }
+        }
+    }
+
+    &-aside {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .menu-list {
+            flex: auto;
+        }
+
+        .collapsed-toggle {
+            flex: 0 0 50px;
+            height: 50px;
+            min-height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+    }
+}

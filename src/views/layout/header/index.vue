@@ -6,28 +6,7 @@
         <Col flex="auto">
             <Row class-name="h100" type="flex" justify="space-between">
                 <Col>
-                    <Menu class="first-menu" mode="horizontal" :theme="'light'" active-name="1">
-                        <MenuItem name="1">
-                            <Icon type="ios-paper" />
-                            数据看板
-                        </MenuItem>
-                        <MenuItem name="2">
-                            <Icon type="ios-people" />
-                            监控告警
-                        </MenuItem>
-                        <MenuItem name="3">
-                            <Icon type="ios-stats" />
-                            日志管理
-                        </MenuItem>
-                        <MenuItem name="4">
-                            <Icon type="ios-construct" />
-                            部署配置
-                        </MenuItem>
-                        <MenuItem name="5">
-                            <Icon type="ios-construct" />
-                            系统配置
-                        </MenuItem>
-                    </Menu>
+                    <FirstMenu></FirstMenu>
                 </Col>
                 <Col>
                     <Row class-name="h100 setting" type="flex" justify="end">
@@ -113,9 +92,12 @@ import { mapGetters } from 'vuex';
 import ScreenFull from 'screenfull';
 import Constants from '@/constants';
 import { SET_LANG } from 'store/mutations-type';
+import FirstMenu from './menu.vue';
 export default {
     name: '',
-    components: {},
+    components: {
+        FirstMenu
+    },
     props: {},
     data() {
         return {

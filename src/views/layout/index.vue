@@ -12,7 +12,9 @@
                 <Content>
                     <Layout>
                         <Header>PageHeader</Header>
-                        <Content>PageContent</Content>
+                        <Content>
+                            <router-view></router-view>
+                        </Content>
                     </Layout>
                 </Content>
                 <Footer>Footer</Footer>

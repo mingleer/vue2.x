@@ -22,17 +22,59 @@ let routes = [{
     meta: {
         title: 'layout'
     },
-    redirect: '/home',
+    redirect: '/dashboard',
     component: () =>
         import('views/layout'),
     children: [{
-        path: '/home',
-        name: 'home',
+        path: '/dashboard',
+        name: 'dashboard',
+        icon: 'ios-speedometer',
         meta: {
-            title: 'home'
+            title: 'dashboard'
         },
         component: () =>
-            import('views/home')
+            import('views/home'),
+        children: []
+    }, {
+        path: '/monitor',
+        name: 'monitor',
+        icon: 'ios-ionic',
+        meta: {
+            title: 'monitor'
+        },
+        component: () =>
+            import('views/home'),
+        children: []
+    }, {
+        path: '/log',
+        name: 'log',
+        icon: 'ios-paper',
+        meta: {
+            title: 'log'
+        },
+        component: () =>
+            import('views/home'),
+        children: []
+    }, {
+        path: '/deployment',
+        name: 'deployment',
+        icon: 'ios-paper',
+        meta: {
+            title: 'deployment'
+        },
+        component: () =>
+            import('views/home'),
+        children: []
+    }, {
+        path: '/settings',
+        name: 'settings',
+        icon: 'ios-settings',
+        meta: {
+            title: 'settings'
+        },
+        component: () =>
+            import('views/home'),
+        children: []
     }]
 }, {
     path: '/404',

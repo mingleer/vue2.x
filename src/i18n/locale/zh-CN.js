@@ -102,9 +102,27 @@ const login = {
     rememberPass: '记住密码? ',
     thirdParty: '第三方'
 };
+/**
+ * 数据看板：首页、
+ * 数据监控：实时监控、历史监控、状态监控
+ * 日志管理：操作日志、系统日志、用户日志
+ * 系统管理：用户管理、角色管理、菜单管理、页面管理、数据字典
+ */
+const menus = {
+    dashboard: {
+        name: '动态面板'
+    },
+    monitor: {
+        name: '数据监控'
+    },
+    log: {},
+    deployment: {},
+    settings: {}
+};
 
 module.exports = {
     common,
     http,
-    login
+    login,
+    menus
 };
